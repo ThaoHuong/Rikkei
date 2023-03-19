@@ -1,0 +1,93 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+p{
+    color: gainsboro;
+}
+section::after{
+    display: block;
+    content: '';
+    clear: both;
+}
+.row_left{
+    width: 30%;
+    float: left;
+    padding: 0px 10px;
+}
+.row_left h1{
+    padding-bottom: 5px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.row_left hr{
+    width: 50px;
+    border: 1px solid orange;
+    margin-bottom: 10px;
+}
+.row_col_2 span{
+    font-size: 16px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.col_item1::after{
+    display: block;
+    content: '';
+    clear: both;
+}
+.col_item1{
+    padding-top: 10px;
+}
+.item_icon{
+    width: 10%;
+    float: left;
+    background-color: bisque;
+    height: 30px;
+}
+.item_content{
+    width: 90%;
+    float: left;
+    height: 30px;
+    padding: 10px;
+    color: azure;
+}
+.row_right{
+    width: 70%;
+    float: left;
+    padding: 0px 10px;
+}
+.row_right h1{
+    margin-bottom: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+}
+input[type=text],[type=email]{
+    width: 100%;
+    padding: 12px 15px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+#btn_send{
+    width: 150px;
+    background-color:cornflowerblue;
+    color: white;
+    padding: 14px 17px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+#btn_send:hover{
+    background-color: coral;
+}
+#txt_content{
+        width: 100%;
+        height: 150px;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 2px;
+        background-color: #f8f8f8;
+        resize: none;
+}

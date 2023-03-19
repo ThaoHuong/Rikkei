@@ -1,0 +1,83 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    background-color: azure;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: 20px;
+}
+header{
+    padding-bottom: 15px;
+}
+main{
+    width: 100%;
+    float: left;
+}
+p{
+    color: darkgrey;
+}
+.header_dau{
+    padding: 10px;
+}
+.header_dau h1{
+    font-size: 40px;
+    font: optional;
+}
+.header_duoi{
+    padding: 10px;
+}
+.main_left{
+    width: 40%;
+    float: left;
+}
+.main_right{
+    width: 60%;
+    float: left;
+}
+.main_left .main_left_img{
+    border-radius: 10px;
+    background-color: aquamarine;
+    height: 350px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.main_left_img_conten{
+    padding-bottom: 15px;
+}
+.main_right_item{
+    margin-bottom: 10px;
+    border-bottom: 2px dashed red;
+    height: 100px;
+    margin-left: 15px;
+}
+.main_right_item:last-child{
+    border: none;
+}
+.main_right_item_left{
+    width: 20%;
+    height: 80px;
+    float: left;
+    background-color: chocolate;
+    border-radius: 5px;
+}
+.main_right_item_left span{
+    display: block;
+    font-size: 42px;
+    text-align: center;
+    color: azure;
+    padding-top: 15px;
+}
+.main_right_item_right{
+    width: 80%;
+    float: left;
+}
+.main_right_item_right h3{
+    margin-left: 10px;
+}
+.main_right_item_right p{
+    margin: 10px 0px 0px 10px;
+}
+

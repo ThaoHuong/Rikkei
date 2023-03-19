@@ -1,0 +1,54 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+h1{
+    padding-bottom: 15px;
+}
+a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+footer{
+    background-color: cadetblue;
+    border-radius: 1px;
+    color: whitesmoke;
+}
+hr{
+    color: azure;
+}
+.row{
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.col{
+    width: 33.33%;  
+}
+.col p{
+    word-wrap: break-word;
+    line-height: 1,5px;
+    display: block;
+}
+.col ul{
+    margin-left: 90px;
+}
+.col_item{
+    padding: 10px;
+}
+.icofont-facebook{
+    
+    margin-left: 50px;
+    background-color: rgb(7, 57, 165);
+}
+.icofont-brand-google{
+    background-color: salmon;
+}
+.icofont-linkedin{
+    background-color: aquamarine;
+}
+.icofont-file-tiff{
+    background-color: cornflowerblue;
+}
