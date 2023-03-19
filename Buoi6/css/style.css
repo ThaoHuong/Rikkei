@@ -1,0 +1,23 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.row{
+    border: 1px solid salmon;
+    height: 1200px;
+    display: flex;
+    /* flext chỉ set trong div không làm ảnh hưởng các phần tử khác */
+    flex-wrap: wrap;
+    /* Căn trái phải giá trị của justify và align là giống nhau */
+    justify-content: end;
+   /* align-content: ; */ 
+    /* Xét độ cao cho các item do mình chỉnh sửa */
+    /* align-items: baseline; */ 
+    /* Sắp xếp theo hàng ,cột  , đảo ngược hàng thì sử dụng -reverse */
+    /* flex-direction: row; */ 
+}
+.col{
+    width: 33.33%;
+    background-color: aquamarine;   
+}

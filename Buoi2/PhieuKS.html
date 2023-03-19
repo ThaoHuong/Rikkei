@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<style type="text/css">
+    .dau h1{
+            font-size: medium;
+
+            }
+    .dau p i{
+            text-align: left;
+            margin-left: 30px;
+    } 
+    section tbody tr{
+       text-align: center;
+    }
+    tbody tr{
+        font-size: medium;
+    }
+    nav{
+        border: 3px; border-color: brown;
+    }
+    button{
+        margin-top: 50px;
+        margin-left: 0px
+    }
+    body{
+        vertical-align:middle;
+        margin-left: 400px;
+    }
+    nav div{
+        border: salmon 10px;
+    }
+    fieldset{
+        margin-bottom: 10px;
+    }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phieu Khao Sat</title>
+</head>
+<body>
+    <header class="dau">
+        <p>
+            <h1>PHIEU KHAO SAT Y KIEN NGUOI HOC VE KHOA HOC</h1>
+            <i>(Dung de lay y kien sinh vien nam cuoi)</i>
+        </p>
+    </header>
+    <form action="" enctype="multipart/form-data">
+        <nav>
+            <fieldset>
+                <div>
+                   <p>Thông tin cá nhân</p> 
+                    <br>
+                    <table class="thongtin">
+                        <tr>
+                            <td>
+                                <b>Họ tên:</b>
+                                <input type="text" name="idhoten" placeholder="Nhập Họ và Tên">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Lớp:</b>
+                                <select name="idlop">
+                                    <option value="HN">
+                                        HN
+                                    </option>
+                                    <option value="HN-03">
+                                        HN-03
+                                    </option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Ngày sinh:</b>
+                                <input type="date">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </fieldset>
+        </nav>
+        <section>
+            <fieldset>
+                <p>
+                    Câu hỏi khảo sát
+                </p>
+                <p>
+                    <div>
+                        <i>1=Hoàn toàn đồng ý; 2=Không đồng ý; 3=Tương đối đồng ý; 4=Đồng ý; 5=Hoàn toàn không đồng ý</i>
+                    </div>
+                </p>
+                <table border="2px" cellspacing="0px" width="100%" >
+                    <thead>
+                        <tr>
+                            <th rowspan="2">STT</th>
+                            <th rowspan="2">Mục tiêu và chương trình </th>
+                            <th colspan="5">Đánh giá</th>
+                        </tr>
+                        <tr>
+                            <th>1</th>
+                            <th>2</th>
+                            <th>3</th>
+                            <th>4</th>
+                            <th>5</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><b>1</b></td>
+                            <td style="text-align: left;">Chương trình đào tạo(ngành đào tạo) có mục tiêu rõ ràng</td>
+                            <td>
+                                <input type="radio" value="id1" name="danhgia1">
+                            </td>
+                            <td>
+                                <input type="radio" value="id2" name="danhgia2">
+                            </td>
+                            <td>
+                                <input type="radio" value="id3" name="danhgia3">
+                            </td>
+                            <td>
+                                <input type="radio" checked="checked" value="id4" name="danhgia4">
+                            </td>
+                            <td>
+                                <input type="radio" value="id5" name="danhgia5">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><b>1</b></td>
+                            <td style="text-align: left;">Chương trình đào tạo(ngành đào tạo) có mục tiêu rõ ràng</td>
+                            <td>
+                                <input type="radio" value="id21" name="danhgia1">
+                            </td>
+                            <td>
+                                <input type="radio" value="id22" name="danhgia2">
+                            </td>
+                            <td>
+                                <input type="radio" checked="checked" value="id32" name="danhgia3">
+                            </td>
+                            <td>
+                                <input type="radio"  value="id42" name="danhgia4">
+                            </td>
+                            <td>
+                                <input type="radio" value="id52" name="danhgia5">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><b>1</b></td>
+                            <td style="text-align: left;">Chương trình đào tạo(ngành đào tạo) có mục tiêu rõ ràng</td>
+                            <td>
+                                <input type="radio" value="id21" name="danhgia1">
+                            </td>
+                            <td>
+                                <input type="radio" value="id22" name="danhgia2">
+                            </td>
+                            <td>
+                                <input type="radio" checked="checked" value="id32" name="danhgia3">
+                            </td>
+                            <td>
+                                <input type="radio"  value="id42" name="danhgia4">
+                            </td>
+                            <td>
+                                <input type="radio" value="id52" name="danhgia5">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><b>1</b></td>
+                            <td style="text-align: left;">Chương trình đào tạo(ngành đào tạo) có mục tiêu rõ ràng</td>
+                            <td>
+                                <input type="radio" value="id21" name="danhgia1">
+                            </td>
+                            <td>
+                                <input type="radio" value="id22" name="danhgia2">
+                            </td>
+                            <td>
+                                <input type="radio" checked="checked" value="id32" name="danhgia3">
+                            </td>
+                            <td>
+                                <input type="radio"  value="id42" name="danhgia4">
+                            </td>
+                            <td>
+                                <input type="radio" value="id52" name="danhgia5">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><b>1</b></td>
+                            <td style="text-align: left;">Chương trình đào tạo(ngành đào tạo) có mục tiêu rõ ràng</td>
+                            <td>
+                                <input type="radio" value="id21" name="danhgia1">
+                            </td>
+                            <td>
+                                <input type="radio" value="id22" name="danhgia2">
+                            </td>
+                            <td>
+                                <input type="radio" checked="checked" value="id32" name="danhgia3">
+                            </td>
+                            <td>
+                                <input type="radio"  value="id42" name="danhgia4">
+                            </td>
+                            <td>
+                                <input type="radio" value="id52" name="danhgia5">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><b>1</b></td>
+                            <td style="text-align: left;">Chương trình đào tạo(ngành đào tạo) có mục tiêu rõ ràng</td>
+                            <td>
+                                <input type="radio" value="id21" name="danhgia1">
+                            </td>
+                            <td>
+                                <input type="radio" value="id22" name="danhgia2">
+                            </td>
+                            <td>
+                                <input type="radio" checked="checked" value="id32" name="danhgia3">
+                            </td>
+                            <td>
+                                <input type="radio"  value="id42" name="danhgia4">
+                            </td>
+                            <td>
+                                <input type="radio" value="id52" name="danhgia5">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><b>1</b></td>
+                            <td style="text-align: left;">Chương trình đào tạo(ngành đào tạo) có mục tiêu rõ ràng</td>
+                            <td>
+                                <input type="radio" value="id21" name="danhgia1">
+                            </td>
+                            <td>
+                                <input type="radio" value="id22" name="danhgia2">
+                            </td>
+                            <td>
+                                <input type="radio" checked="checked" value="id32" name="danhgia3">
+                            </td>
+                            <td>
+                                <input type="radio"  value="id42" name="danhgia4">
+                            </td>
+                            <td>
+                                <input type="radio" value="id52" name="danhgia5">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><b>1</b></td>
+                            <td style="text-align: left;">Chương trình đào tạo(ngành đào tạo) có mục tiêu rõ ràng</td>
+                            <td>
+                                <input type="radio" value="id21" name="danhgia1">
+                            </td>
+                            <td>
+                                <input type="radio" value="id22" name="danhgia2">
+                            </td>
+                            <td>
+                                <input type="radio" checked="checked" value="id32" name="danhgia3">
+                            </td>
+                            <td>
+                                <input type="radio"  value="id42" name="danhgia4">
+                            </td>
+                            <td>
+                                <input type="radio" value="id52" name="danhgia5">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </fieldset>
+            <button type="submit" value="idgui" name="gui">Gui</button>
+            <button type="reset" value="idlamlai" name="lamlai">Làm lại</button>
+        </section>    
+    </form>
+</body>
+</html>
