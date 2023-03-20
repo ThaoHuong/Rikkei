@@ -273,3 +273,24 @@ footer{
     font-size: 18px;
     padding-bottom: 7px;
 }
+/* Kích thước 0<= scren <= 768px thêm kích thước giới hạn thì and (min-width: giá trị) */
+@media(max-width:768px){
+    .body_content{
+        width: 100%;
+     }
+     .nav_item{
+        width: 100%;
+     }
+}
+/* kích thước 0<=scren <=425px */
+@media(max-width:425px){
+/*  áp dụng css ở đây */
+    .body_content{
+        width: 100%;
+    }
+}
+@media(max-width:320px){
+    .body_content{
+        width: 100%;
+     }
+}
