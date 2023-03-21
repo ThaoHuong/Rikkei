@@ -1,5 +1,460 @@
+/* reset css */
 *{
-    margin: 0px;
-    padding: 0px;
     box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a{
+    text-decoration: none;
+}
+/* end reset css */
+
+[class*='col']{
+    padding: 0 15px;
+}
+#wrap{
+    width: 100%;
+}
+.container{
+    width: 1120px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+/* .container .header_item > .row{
+    width: 100%;
+    min-height: 50px;
+    position: sticky;
+    top: 0px;
+} */
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.col_25{
+    width: 25%;
+}
+.col_75{
+    width: 75%;
+   
+}
+.col_33{
+    width: 33.333%;
+}
+.col_50{
+    width: 50%;
+}
+.col_25 .col_25_logo{
+    line-height: 35px;
+    font-weight: bold;
+    font-size: 36px;
+    color: #ee531f;
+}
+.col_25 a{
+    color: rgb(241, 163, 117);
+    font-size: 25px;
+    display: block;
+}
+.col_25 a span{
+    color: rgb(241, 39, 17);
+}
+.col_75_menu::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.col_75 .col_75_menu{
+    display: flex;
+    flex-wrap: nowrap;
+    /* align-items: flex-end; */
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.col_75 .col_75_menu li{
+    padding: 10px 10px;
+}
+.col_75 .col_75_menu li a{
+    color: rgb(120, 123, 126);
+    font-weight: 600;
+    display: block;
+    font-size: 16px;
+    line-height: 35px;
+}
+.col_75_menu li a:hover{
+    color: salmon;
+}
+.col_75 .col_75_menu li:first-child a{
+    color: salmon
+}
+.banner_line{
+    background-color: salmon;
+    height: 50px;
+    margin-bottom: -50px;
+}
+.banner .container{
+    background-color: white;
+}
+.container .banner_img .img_item{
+    width: 100%;
+}
+.banner_item{
+    position: relative;
+    /* padding: 0 15px; */
+}
+.banner_caption{
+    width: 40%;
+    min-height: 100px;
+    background-color: rgb(228, 36, 15,0.7);
+    color: white;
+    padding: 15px;
+    position: absolute;
+    left: 40px;
+    bottom: 40px;
+}
+.banner_caption h3{
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.banner_caption p{
+    word-wrap: break-word;
+    line-height: 15px;
+    font-size: 17px;
+}
+main{
+    padding: 25px 0;
+}
+/* .feature .col_33{
+    margin-left: -19px;
+} */
+.feature_img .row{
+    justify-content: space-between;
+}
+.feature_item{
+    margin-bottom: 25px;
+}
+.feature_item .col_50:first-child{
+    margin-left: -15px;
+}
+.feature_img img{
+    width: 100%;
+}
+.feature_row{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.feature_title{
+    padding: 20px 0;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+}
+.feature_icon {
+    margin-right: 20px;
+}
+.feature_title_item {
+    font-size: 17px;
+    font-weight: 600;
+    color:salmon;
+}
+.feature_content p{
+    word-wrap: break-word;
+    line-height: 15px;
+    font-size: 15px;
+    color: rgb(94, 91, 81);
+}
+.read_more {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+    padding: 10px 20px;
+    background-color: salmon;
+    margin-top: 20px;
+}
+.read_more:hover{
+    color: rgb(3, 75, 51);
+}
+.title .row {
+    color: salmon;
+    position: relative;
+    padding: 20px 0px;
+}
+.title h2 {
+    display: inline-block;
+    background-color: #fff;
+    font-size: 22px;
+    font-weight: 600;
+}
+.title img{
+    height: 100%;
+    width: 100%;
+}
+/* Thêm nội dung, hình ảnh ngay phía sau thẻ title  */
+/* .title::after {
+    content: '';
+    background-image: url('/img/bg-line.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+} */
+.recent_item .row{
+    flex-direction: column;
+    align-items: normal;
+}
+.recent_item {
+    border: 1px solid #d3cece;
+}
+.recent_img img {
+    width: 100%;
+}
+.recent_cap {
+    padding: 15px;
+}
+.recent_cap h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: rgb(165, 163, 163);
+    margin: 10px 0; 
+}
+.recent_cap p {
+    color: salmon;
+    font-weight: bold;
+    font-size: small;
+    line-height: 20px;
+}
+footer {
+    background-color:salmon;
+}
+footer .container{
+    background-color: white;
+}
+.footer_content {
+    background-color: salmon;
+    padding: 20px;
+    color: white;
+}
+.footer_item h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.footer_item p{
+    line-height: 19px;
+    word-wrap: break-word;
+    display: inline-block;
+    padding-top: 10px;
+}
+.footer_item span{
+    font-style: italic;
+}
+.link_footer {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+.link_footer li {
+    padding-right: 5px;
+}
+@media(max-width:1024px){
+    #wrap{
+        width: 100%;
+    }
+    .container{
+        width: 90%;
+    }
+    .title h2 {
+        font-size: 19px;
+    }
+    .recent_cap h3 {
+        font-size: 12px;
+    }
+}
+@media(max-width:768px){
+    #wrap{
+        width: 100%;
+    }
+    .container{
+        width: 90%;
+    }
+    .col_25 a {
+        font-size: 20px;
+    }
+    .col_75 .col_75_menu li a {
+        font-size: 10px;
+    }
+    .banner_caption{
+        width: 55%;
+    }
+    main{
+        padding: 10px 0;
+    }
+    .feature_img img{
+        width: 150%;
+    }
+    .feature_title {
+        padding: 10px 0;
+    }
+    .feature_icon img {
+        margin-right: 10px;
+        width: 115%;
+    }
+    .feature_title_item {
+        font-size: 10px;
+    }
+    .feature_content p {
+        font-size: 12px;
+    }
+    .read_more {
+        font-size: 16px;
+        padding: 8px 16px;
+        margin-top: 15px;
+    }
+    .title h2 {
+        font-size: 15px;
+    }
+    .recent_cap h3 {
+        font-size: 8px;
+        margin: 0;
+    }
+    .recent_cap p {
+        font-size: x-small;
+    }
+    .footer_content .row{
+        align-items: normal;
+    }
+}
+@media(max-width:425px){
+    #wrap{
+        margin: 0 auto;
+        width: 108%;
+    }
+    .container{
+        width: 100%;
+        padding: 0 0;
+    }
+    .col_33:first-child{
+        margin-left: -7px;
+    }
+    .col_25 a {
+        font-size: 10px;
+    }
+    .col_75 .col_75_menu {
+        justify-content: space-between;
+    }
+    .col_75 .col_75_menu li{
+        padding: 5px 5px;
+    }
+    .col_75 .col_75_menu li a {
+        font-size: 6px;
+    }
+    .banner_caption {
+        width: 70%;
+        padding: 13px;
+        left: 10px;
+        bottom: 10px;
+    }
+    .banner_caption h3 {
+        font-weight:600;
+        margin-bottom: 5px;
+    }
+    .banner_caption p {
+        font-size: 15px;
+    }   
+    main{
+        padding: 10px 0;
+    }
+    .col_33{
+        width: 50%;
+    }
+    .title .row{
+        width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        clear: both;
+    }
+    .title .row .col_25{
+        width: 25%;
+    }
+    .title .row .col_75{
+        width: 75%;
+    }
+    .recent_post .row .col_25{
+        width: 50%;
+        margin-bottom: 10px;
+    }
+    .recent_post{
+        margin-top: -35px;
+    }
+    .title h2 {
+        font-size: 8px;
+    }
+    .recent_cap h3 {
+        font-size: 8px;
+        margin: 0;
+    }
+    .recent_cap p {
+        font-size: x-small;
+    }
+    .footer_content .row{
+        align-items: normal;
+    }
+    .footer_content .col_33{
+        width: 33.33%;
+    }
+    .footer_item h2 {
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+    .footer_item p {
+        line-height: normal;
+        padding-top: 5px;
+    }
 }
