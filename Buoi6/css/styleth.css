@@ -77,6 +77,11 @@ footer{
     background-color:rgb(72, 78, 82);
     color: aliceblue;
 }
+.header_menu{
+    position: sticky;
+    top: 0;
+    color: aquamarine;
+}
 .nav_item{
     width: 100%;
     display: flex;
