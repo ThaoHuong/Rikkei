@@ -68,6 +68,7 @@ a{
     position: sticky;
     top: 0px;
 } */
+
 .row{
     display: flex;
     flex-wrap: wrap;
@@ -305,6 +306,19 @@ footer .container{
 .link_footer li {
     padding-right: 5px;
 }
+.menu_icon{
+    color: salmon;
+    margin: 10px 0;
+    display: none;
+}
+@media(max-width:2560px){
+    #wrap{
+        width: 100%;
+    }
+    .container{
+        width: 90%;
+    }
+}
 @media(max-width:1024px){
     #wrap{
         width: 100%;
@@ -324,7 +338,7 @@ footer .container{
         width: 100%;
     }
     .container{
-        width: 100%;
+        width: 90%;
     }
     .col_25 a {
         font-size: 20px;
@@ -374,7 +388,7 @@ footer .container{
 }
 @media(max-width:425px){
     #wrap{
-        width: 108%;
+        width: 100%;
     }
     .container{
         width: 100%;
