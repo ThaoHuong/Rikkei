@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var arr = [];
+      var n = parseInt(prompt("nhap so luong dan cuu: "));
+      for (let i = 0; i < n; i++) {
+        if (n !== null && !isNaN(n) && n !== " ") {
+          arr[i] = parseInt(prompt("Nhap kich thuoc: "));
+        }
+      }
+      console.log("xin chao day la kich thuoc dan cuu cua toi");
+      console.log(arr);
+
+      let max = arr[0];
+      for (let i = 0; i < arr.length; i++) {
+        if (max < arr[i]) {
+          max = arr[i];
+        }
+      }
+      console.log("Con cuu lon nhat co kich thuoc: " + max + " hay cao no");
+      console.log("Sau khi cao long: ");
+      for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === max) {
+          arr[i] = 8;
+        }
+      }
+      console.log(arr);
+
+      console.log("Mot thang da troi qua, day la kich thuoc cua chung: ");
+      for (let i = 0; i < arr.length; i++) {
+        arr[i] += 50;
+      }
+      console.log(arr);
+      let max1 = arr[0];
+      for (let i = 0; i < arr.length; i++) {
+        if (max1 < arr[i]) {
+          max1 = arr[i];
+        }
+      }
+      console.log(
+        " hien tai con cuu lon nhat co kich thuoc: " + max1 + " hay cao no"
+      );
+      console.log("Sau khi cao long: ");
+      for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === max1) {
+          arr[i] = 8;
+        }
+      }
+      console.log(arr);
+      console.log("Hai thang da troi qua, day la kich thuoc cua chung: ");
+      for (let i = 0; i < arr.length; i++) {
+        arr[i] += 50;
+      }
+      console.log(arr);
+      let max2 = arr[0];
+      for (let i = 0; i < arr.length; i++) {
+        if (max2 < arr[i]) {
+          max2 = arr[i];
+        }
+      }
+      console.log(
+        " hien tai con cuu lon nhat co kich thuoc: " + max2 + " hay cao no"
+      );
+      console.log("Sau khi cao long: ");
+      for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === max2) {
+          arr[i] = 8;
+        }
+      }
+      console.log(arr);
+      console.log("Ba thang da troi qua, day la kich thuoc cua chung: ");
+      for (let i = 0; i < arr.length; i++) {
+        arr[i] += 50;
+      }
+      console.log(arr);
+      let max3 = arr[0];
+      for (let i = 0; i < arr.length; i++) {
+        if (max3 < arr[i]) {
+          max3 = arr[i];
+        }
+      }
+      console.log(
+        " hien tai con cuu lon nhat co kich thuoc: " + max3 + " hay cao no"
+      );
+      console.log("Sau khi cao long: ");
+      for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === max3) {
+          arr[i] = 8;
+        }
+      }
+      console.log(arr);
+
+      let sum = 0;
+      let tongtien = 0;
+      for (let i = 0; i < arr.length; i++) {
+        sum += arr[i];
+        tongtien = sum * 2;
+      }
+      console.log("tong " + sum);
+      console.log("tong gia tri " + tongtien);
+    </script>
+  </body>
+</html>
