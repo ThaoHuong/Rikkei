@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //
+      var styles = ["Jazz", "Blues", "Jazz", "Blues"];
+      styles.push("Rock-n-Roll"); // Push dung de them phan tu vao cuoi mang
+      console.log(styles);
+      // neu i%2==1 thi co gia tri le
+      for (let i = 0; i < styles.length; i++) {
+        if (styles[i].length % 2 == 1) {
+          let r = (styles.length - 1) / 2;
+          styles[r] = "Classics";
+        }
+      }
+      console.log(styles);
+
+      //them or xoa phan tu dau tien splice xoa 1 or nhieu phan tu o vi tri bat ky trong mang
+      styles.splice(0, 1);
+      console.log(styles);
+      //
+      styles.shift(); //dùng để xóa phần tử nằm ở vị trí đầu mảng.
+      console.log(styles);
+
+      //
+      styles.splice(0, 0, "Rap", "Reggae");
+      console.log(styles);
+      //
+      styles.unshift("Rap", "Reggae"); //dùng để them phần tử nằm ở vị trí đầu mảng.
+      console.log(styles);
+    </script>
+  </body>
+</html>

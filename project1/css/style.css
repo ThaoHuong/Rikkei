@@ -397,6 +397,7 @@ body {
   text-transform: uppercase;
   position: relative;
   transition: 0.4s;
+  border: 1px solid transparent;
 }
 .menu_bottom_item li:first-child {
   padding-left: 0;

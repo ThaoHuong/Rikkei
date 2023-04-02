@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // nhap tu ban phim, dkien cancel, "", k phai so => false
+      var arr = [];
+      var check = true;
+      while (check) {
+        let n = parseInt(prompt("Nhap so: "));
+        if (n != null && n != "" && !isNaN(n)) {
+          arr.push(n);
+        } else {
+          check = false;
+        }
+      }
+      console.log(arr);
+      //
+      console.log("tong la: ");
+      let sum = 0;
+      for (let i = 0; i < arr.length; i++) {
+        sum += arr[i];
+      }
+      console.log(sum);
+      //
+      let max = arr[0];
+      let min = arr[0];
+      for (let i = 0; i < arr.length; i++) {
+        if (max < a[i]) {
+          max = arr[i];
+        }
+        if (min > a[i]) {
+          min = arr[i];
+        }
+      }
+      console.log("gtri lon nhat: " + max);
+      console.log("gtri nho nhat: " + min);
+    </script>
+  </body>
+</html>

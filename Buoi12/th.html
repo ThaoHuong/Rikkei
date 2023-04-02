@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var arr = [];
+      var n = parseInt(prompt("nhap do dai mang: "));
+      for (let i = 0; i < n; i++) {
+        if (n > 4) {
+          arr[i] = parseInt(prompt("Nhap so: "));
+        } else {
+          console.log("err");
+        }
+      }
+      console.log(arr);
+      //   for (let i = 0; i < arr.length; i++) {
+      //     console.log(arr[i]);
+      //   }
+      //
+      function findArray(arr, key) {
+        let search = [];
+        for (let item of arr) {
+          if (item === key) {
+            search[search.length] = item;
+            alert(item + "co trong mang");
+          }
+        }
+        return search;
+      }
+      let key = parseInt(prompt("nhap key: "));
+      console.log(findArray(arr, key));
+      // let key = parseInt(prompt("nhap key: "));
+      // for (let i = 0; i < arr.length; i++) {
+      //   if (arr[i] === key) {
+      //     arr[arr.length] = i;
+      //     // alert(arr[i] + " co trong mang");
+      //   } //else if (arr[i] != key) {
+      //   //   alert(arr[i] + " khong co trong mang");
+      //   // }
+      // }
+      // console.log(arr);
+    </script>
+  </body>
+</html>

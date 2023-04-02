@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var arr = []; //Khai báo mảng A, cho phep nhap 5 gia tri, hien thi 5 gia tri
+      for (let i = 0; i < 5; i++) {
+        arr[i] = parseInt(prompt("Nhập mang: "));
+      }
+      console.log(arr);
+      //hienthi
+      for (let i = 0; i < arr.length; i++) {
+        console.log(arr[i]);
+      }
+      //
+      let sum = 0;
+      for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 2 == 0) {
+          console.log("mang chan la: " + arr[i]);
+          sum += arr[i];
+        }
+      }
+      console.log("tong chan la: " + sum);
+      // chi so le
+      let sumle = 0;
+      for (let i = 0; i < arr.length; i += 2) {
+        console.log("mang le la: " + arr[i]);
+        sumle += arr[i];
+      }
+      console.log("tong le la: " + sumle);
+      //
+      var check = true;
+      if (arr[i] < 2) {
+        check = false;
+      } else if (arr[i] == 2) {
+        check = true;
+      } else if (arr[i] % 2 == 0) {
+        check = false;
+      } else {
+        for (let i = 3; i <= arr.length - 1; i += 2) {
+          // console.log(i);
+          if (arr[i] % i == 0) {
+            console.log("so nguyen to la:" + arr[i]);
+            check = false;
+            break;
+          }
+        }
+      }
+      if (check) {
+        console.log(arr[i] + "SNT");
+      } else {
+        console.log(arr[i] + "khong phai SNT");
+      }
+      //
+      let max = arr[0];
+      let min = arr[0];
+      for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > max) {
+          max = arr[i];
+        }
+        if (arr[i] < min) {
+          min = arr[i];
+        }
+      }
+      console.log("gtri lon nhat: " + max);
+      console.log("gtri nho nhat: " + min);
+      //
+      var hoandoi;
+      for (let i = 0; i < arr.length - 1; i++) {
+        for (let j = i + 1; j <= arr.length; j++) {
+          if (arr[i] < arr[j]) {
+            hoandoi = arr[i];
+            arr[i] = arr[j];
+            arr[j] = hoandoi;
+          }
+        }
+      }
+      console.log("sau khi sap xep la: ");
+      //hienthi
+      for (let i = 0; i < arr.length; i++) {
+        console.log(arr[i]);
+      }
+
+      //
+      let n = parseInt(prompt("Nhap so nguyen can thong ke: "));
+      let count = 0;
+      for (let i = 0; i < arr[i].length; i++) {
+        if (arr[i] == n) {
+          count++;
+        }
+      }
+      console.log(count);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var arr = [];
+      var n = parseInt(prompt("Nhap so luong phan tu: "));
+      // console.log(n);
+      for (let i = 0; i < n; i++) {
+        arr[i] = [];
+        for (let j = 0; j < n; j++) {
+          arr[i][j] = parseInt(prompt("nhap so cot so hang"));
+        }
+      }
+      //
+      for (let i = 0; i < arr.length; i++) {
+        let r = "";
+        for (let j = 0; j < arr[i].length; j++) {
+          r += arr[i][j] + " ";
+        }
+        console.log(r);
+      }
+      // duong bien la duong co i=0, i=n-1 va j=0, j=arr[i]-1
+      console.log("phan tu nam tren duong bien");
+      for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr[i].length; j++) {
+          // let r = "";
+          if (
+            i === 0 ||
+            i === arr.length - 1 ||
+            j === 0 ||
+            j === arr[i].length - 1
+          ) {
+            // r += arr[i][j] + "";
+            console.log(arr[i][j]);
+          }
+        }
+      }
+      //
+      console.log("phan tu duong cheo chinh la");
+      for (let i = 0; i < n; i++) {
+        for (let j = 0; j < n; j++) {
+          if (i === j) {
+            console.log(arr[i][j]);
+          }
+        }
+      }
+      //c2
+      // for (let i = 0; i < n; i++) {
+      //   console.log(a[i][i]);
+      // }
+
+      // dg cheo phu la duong bat dau tu 0 cho den n-1
+      console.log("phan tu duong cheo phu la");
+      for (let i = 0; i < n; i++) {
+        for (let j = 0; j < n; j++) {
+          if (i + j === n - 1) {
+            console.log(arr[i][j]);
+          }
+        }
+      }
+      //
+      console.log("sap xep: ");
+      for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr.length - 1; j++) {
+          for (let k = j + 1; k < arr.length; k++) {
+            if (arr[i][j] > arr[i][k]) {
+              let hoandoi = arr[i][j];
+              arr[i][j] = arr[i][k];
+              arr[i][k] = hoandoi;
+            }
+          }
+        }
+      }
+      console.log(arr);
+    </script>
+  </body>
+</html>
