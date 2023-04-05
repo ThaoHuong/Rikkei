@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   let str = prompt("Nhập đoạn văn bản");
+      //   var viethoa = function (str) {
+      //     let result = "";
+      //     for (let i = 0; i < str.length; i++) {
+      //       result = str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+      //     }
+      //     console.log(result);
+      //   };
+      //   viethoa(str);
+      //
+
+      //   var viethoa = function (str) {
+      //     var str = prompt("Nhập đoạn văn bản");
+      //     var firstLetter = str.slice(0, 1);
+      //     var allLetterBehind = str.slice(1);
+      //     let r = "";
+      //     if (str != null) {
+      //       r = firstLetter.toUpperCase() + allLetterBehind.toLowerCase();
+      //     }
+      //   };
+      //   viethoa(str);
+      //
+      //   function theky() {
+      //     var nam = prompt("nhap nam: ");
+      //     let tk = 0;
+      //     console.log("nam: " + nam);
+      //     if (nam % 100 === 0) {
+      //       tk = nam / 100;
+      //       console.log(nam + " thuoc the ky " + tk);
+      //     } else {
+      //       tk = nam / 100 + 1;
+      //       console.log(nam + " thuoc the ky " + tk);
+      //     }
+      //   }
+      //   theky();
+      //
+      function catchuoi() {
+        var name = prompt("nhap chuoi: ");
+        var mang = name.slice(0, 10);
+        var sau = "...";
+        let result = "";
+        if (name != null && name.length > 15) {
+          result = mang + sau;
+          console.log(result);
+        } else {
+          console.log("chuoi khong hop le");
+        }
+      }
+      catchuoi();
+    </script>
+  </body>
+</html>

@@ -22,28 +22,29 @@
       //     console.log(arr[i]);
       //   }
       //
-      function findArray(arr, key) {
-        let search = [];
-        for (let item of arr) {
-          if (item === key) {
-            search[search.length] = item;
-            alert(item + "co trong mang");
-          }
-        }
-        return search;
-      }
-      let key = parseInt(prompt("nhap key: "));
-      console.log(findArray(arr, key));
+
       // let key = parseInt(prompt("nhap key: "));
       // for (let i = 0; i < arr.length; i++) {
       //   if (arr[i] === key) {
-      //     arr[arr.length] = i;
-      //     // alert(arr[i] + " co trong mang");
-      //   } //else if (arr[i] != key) {
-      //   //   alert(arr[i] + " khong co trong mang");
-      //   // }
+      //     arr[arr.length] = arr[i];
+      //     alert(arr[i] + " co trong mang" + i);
+      //   } else if (arr[i] != key) {
+      //     alert(arr[i] + " khong co trong mang");
+      //   }
       // }
       // console.log(arr);
+      //
+      let key = parseInt(prompt("nhap key: "));
+      for (let i of arr) {
+        let sr = [];
+        if (arr[i] === key) {
+          sr[sr.length] = arr[i];
+          alert(arr[i] + " co trong mang" + i);
+        } else {
+          alert(arr[i] + " khong co trong mang");
+        }
+      }
+      console.log(arr);
     </script>
   </body>
 </html>
