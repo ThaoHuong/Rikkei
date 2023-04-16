@@ -1,5 +1,16 @@
+class RegisterUser {
+  constructor(id = 0, username = "", phone = "", email = "", password = "") {
+    this.id = id;
+    this.username = username;
+    this.phone = phone;
+    this.email = email;
+    this.password = password;
+  }
+}
 // Khoi tao, lay du lieu users voi localStorage va mot mang trong
+
 var users = JSON.parse(localStorage.getItem("users")) || [];
+
 $(document).ready(function () {
   $("#register_form").submit(function (e) {
     e.preventDefault();
@@ -54,13 +65,15 @@ $(document).ready(function () {
         $("#phone").after('<span class="error">Enter a valid phone</span>');
         return;
       }
-      var emailregEx =
-        /^[A-Z0-9][A-Z0-9._%+-]{0,63}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/;
-      var validEmail = emailregEx.test(email);
-      if (!validEmail) {
-        $("#email").after('<span class="error">Enter a valid email</span>');
-        return;
-      }
+      // var emailregEx =
+      //   /^[A-Z0-9][A-Z0-9._%+-]{0,63}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/;
+      var regexEmail = /^[\w\.]+@[\w\-\.]+\.[a-z]{2,4}$/;
+      var validEmail = regexEmail.test(email);
+      // if (!validEmail) {
+      //   $("#email").after('<span class="error">Enter a valid Email</span>');
+      //   return;
+      // }
+
       var passwordEx = /^.{8,}$/;
       var validPass = passwordEx.test(password);
       if (!validPass) {
@@ -76,28 +89,25 @@ $(document).ready(function () {
       }
     }
 
-    for (let i = 0; i < users.length; i++) {
-      if (users[i].username === username) {
-        $("#username").after(
-          '<span class="error"> User Name already exists</span>'
-        );
-        return;
-      }
-      if (users[i].email === email) {
-        $("#email").after('<span class="error"> Email already exists</span>');
-        return;
-      }
-    }
-    var user = {
-      username: username,
-      email: email,
-      password: password,
-      phone: phone,
-      status: true,
-    };
-
-    // add users vao mang
-    users.push(user);
+    // for (let i = 0; i < users.length; i++) {
+    //   if (users[i].username === username) {
+    //     $("#username").after(
+    //       '<span class="error"> User Name already exists</span>'
+    //     );
+    //     return;
+    //   }
+    //   if (users[i].email === email) {
+    //     $("#email").after('<span class="error"> Email already exists</span>');
+    //     return;
+    //   }
+    // }
+    let newUser = new RegisterUser();
+    newUser.id = users.length + 1;
+    newUser.username = $("#username").val();
+    newUser.phone = $("#phone").val();
+    newUser.email = $("#email").val();
+    newUser.password = $("#psw").val();
+    users.push(newUser);
 
     // update localStorage
     localStorage.setItem("users", JSON.stringify(users));

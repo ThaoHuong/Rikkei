@@ -10,9 +10,7 @@ class User {
 }
 
 // Khai báo khởi tạo, neu chua co thi khoi tao mang co san
-var users = JSON.parse(localStorage.getItem("users")) || [
-  new user(1, "Huong", "0973005725", "nguyenthaohuonghy@gmail.com", "12345678"),
-];
+var users = JSON.parse(localStorage.getItem("users")) || [];
 
 // Định nghĩa hàm hiển thị User
 function loadUser() {
