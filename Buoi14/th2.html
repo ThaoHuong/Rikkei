@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="title" class="txt">JavaScript</h1>
+    <h1 class="txt">GetByTagName</h1>
+    <div id="list" style="border: 2px solid #000">
+      <input type="text" id="replace" />
+    </div>
+    <input id="pass" type="password" value="Abc@123456" />
+    <!-- them 1 the vao phia truoc 1 the  -->
+    <div id="content">
+      <h5>Xin chào các bạn</h5>
+      <h5>chúc vui vẻ khi học bài</h5>
+    </div>
+
+    <input type="button" value="View" id="btn-view" />
+    <script>
+      // Tìm các phần tử HTML
+      var h1 = document.getElementById("title");
+      var byTagName = document.getElementsByTagName("h1");
+      var byClassName = document.getElementsByClassName("txt");
+
+      var querySelector = document.querySelector(".txt");
+      var querySelectorAll = document.querySelectorAll("#title");
+      h1.innerText = "JavaScript DOM";
+      console.log(h1.id);
+      console.log(h1);
+      console.log(byTagName);
+      console.log(byClassName);
+      console.log(querySelector);
+      console.log(querySelectorAll);
+
+      // Thay đổi thuộc tính, truy xuất thông tin
+      var text = "Danh sách text";
+      // lay Id
+      var _list = document.getElementById("list");
+      // them text vao li voi the innerHTML ==>  them noi dung vao the Html
+      _list.innerHTML = `
+            <ul>
+                <li>${text}</li>
+                <li>${text}</li>
+                <li>Danh sách 3</li>
+            </ul>
+        `;
+      // Thay doi thuoc tinh
+      _list.style.borderColor = "red";
+      _list.style.borderWidth = "10px";
+      // cach # hien thi va them thuoc tinh
+      console.log(_list.style.borderStyle);
+      console.log(_list.style.borderColor);
+      //
+      var pass = document.getElementById("pass");
+      // Thiet lap thuoc tinh bang attribute
+      pass.setAttribute("type", "text");
+
+      // Thêm, xóa phần tử HTML
+      // Tao the HTML
+      var btn = document.createElement("button");
+      btn.id = "btn";
+      btn.innerText = "Click me";
+      // Them 1 the dung appendChild
+      _list.appendChild(btn);
+      // cach khac them 1 the vao div
+      document.getElementById("list").appendChild(h1);
+      // Xoa 1 the dung removeChild
+      //_list.removeChild(btn);
+      // Thay the 1 htm (node) bang 1 html (node) khac
+      _list.replaceChild(document.createElement("input"), btn);
+      //
+      // Lấy button
+      var button = document.getElementById("btn-view");
+
+      // Thêm sự kiện click cho button
+      button.addEventListener("click", function () {
+        // Tạo mới một thẻ h1
+        var h1 = document.createElement("h1");
+
+        // Thêm nội dung HTML vào thẻ h1
+        h1.innerHTML = "Chào mừng bạn đến với freetuts.net";
+
+        // Lấy thẻ ngoài cùng
+        var element = document.getElementById("content");
+
+        // Lấy thẻ cần isertBefore
+        var element_child = document.getElementsByTagName("h5")[1];
+
+        // Insert Before
+        element.insertBefore(h1, element_child);
+      });
+    </script>
+  </body>
+</html>

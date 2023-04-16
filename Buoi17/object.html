@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Định nghĩa lớp Sinh viên : class la tap hop cac doi tuong
+      // khai bao bien
+      function SinhVien(id, name, email) {
+        // Định nghĩa các thuộc tính
+        this.id = id;
+        this.name = name;
+        this.email = email;
+        // Định nghĩa phương thức (hành vi của đối tượng)
+        this.xinChao = function () {
+          console.log(`Xin chào! Tôi tên là ${this.name}`);
+        };
+      }
+
+      // Bổ sung phương thức cho class đã định nghĩa
+      //
+      SinhVien.prototype.display = function () {
+        console.log(this.id);
+        console.log(this.name);
+        console.log(this.email);
+      };
+
+      // Khởi tạo đối tượng
+      // Them thong tin cua doi tuong vao class Sv
+      var sv = new SinhVien("SV01", "Đức", "duc@gmail.com");
+      var sv2 = new SinhVien("SV02", "Tâm", "tam@gmail.com");
+
+      // thay doi thuoc tinh
+      // gán giá trị cho thuộc tính của đối tượng
+      sv.id = "SV03";
+      // lấy giá trị trong thuộc tính của đối tượng
+      console.log(sv.id);
+
+      // hien thi, goi cac phuong thuc cua doi tuong
+      sv.xinChao();
+      sv2.xinChao();
+      sv2.display();
+
+      // su dung truy xuat 1 lan
+      var subject = {
+        id: "HCJ",
+        name: "Thiet ke giao dien web",
+        show: function () {
+          console.log(this.name);
+        },
+      };
+      console.log(subject.name);
+
+      // cach khoi tao khac
+      var obj = new Object();
+      // sau khi khoi tao thi gan thuoc tinh
+      obj.title = "Tai lieu huong dan HTML";
+      obj.price = 45000;
+
+      // hien thi
+      obj.show = function () {
+        console.log(this.title);
+      };
+      // goi lai function
+      obj.show();
+      console.log(obj.price);
+
+      // tao doi tuong dinh nghia class bang tu khoa class
+      // ngay sau khi dinh nghia thi viet luon ham khoi tao
+      // khong can dung den tu khoa function
+      class Person {
+        constructor(id, name, phone) {
+          // cac thuoc tinh
+          this.id = id;
+          this.name = name;
+          this.phone = phone;
+        }
+        // cac phuong thuc
+        display() {
+          console.log(this.id);
+          console.log(this.name);
+          console.log(this.phone);
+        }
+      }
+      //khoi tao
+      var p = new Person("P001", "Thắng", "0987654321");
+      p.display();
+    </script>
+  </body>
+</html>

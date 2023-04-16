@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+        Xây dựng đối tượng book gồm các thuộc tính và phương thức sau:
+            a. bookId: mã sách
+            b. bookName: tên sách
+            c. price: giá sách
+            d. author: Các tác giả sách
+            e. bookStatus: trạng thái sách
+            f. inputData: cho phép nhập thông tin sách
+            g. displayData: cho phép hiển thị các thông tin sách
+        */
+      // dinh nghia class
+
+      class Book {
+        // tham so khoi tao
+        // dinh nghia cho class
+        // them cac gia tri mac dinh cho class book
+        constructor(
+          bookId = "",
+          bookName = "",
+          price = 0.0,
+          author = "",
+          bookStatus = true
+        ) {
+          // Cac thuoc tinh trong class book
+          this.bookId = bookId;
+          this.bookName = bookName;
+          this.price = price;
+          this.author = author;
+          this.bookStatus = bookStatus;
+        }
+        // Nhap du lieu dau vao cho class
+        inputData() {
+          this.bookId = prompt("Nhập mã sách");
+          this.bookName = prompt("Nhập tên sách");
+          this.price = prompt("Nhập giá sách");
+          this.author = prompt("Nhập tác giả");
+          this.bookStatus = prompt("Nhập trạng thái sách");
+        }
+        // hien hi thong tin
+        displayData() {
+          console.log(`
+                Mã sách: ${this.bookId}
+                Tên sách: ${this.bookName}
+                Giá: ${this.price}
+                Tác giả: ${this.price}
+                Trạng thái: ${this.bookStatus}
+                `);
+        }
+      }
+      // khoi tao doi tuong
+      // khi khong truyen vao thi se k co gia tri nao ca
+      var book = new Book();
+
+      book.inputData();
+      console.log(book);
+      book.displayData();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //5. Tạo đối tượng máy tính gồm 3 phương thức
+      //   a. Read(): nhận hai giá trị và lưu chúng dưới dạng thuộc tính đối tượng
+      //   b. Sum(): trả về tổng giá trị đã lưu
+      //   c. Mul(): trả về tích các giá trị đã lưu
+
+      class Ca {
+        constructor() {
+          this.a = 0;
+          this.b = 0;
+        }
+        Read(a, b) {
+          this.a = a;
+          this.b = b;
+        }
+        Sum() {
+          return this.a + this.b;
+        }
+        Mul() {
+          return this.a * this.b;
+        }
+      }
+
+      var cal = new Ca();
+      cal.Read(5, 6);
+      console.log("Sum: " + cal.Sum());
+      console.log("Mul: " + cal.Mul());
+      cal.Read(15, 16);
+      console.log("Sum: " + cal.Sum());
+      console.log("Mul: " + cal.Mul());
+    </script>
+  </body>
+</html>

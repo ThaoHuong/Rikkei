@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .content {
+        display: none;
+      }
+      .show {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>hello</h1>
+    <button class="btn">Click me</button>
+    <button class="btn">Click me</button>
+    <button class="btnChange">Change</button>
+    <button class="btnCheck">Check</button>
+    <button class="btnShow">Show</button>
+    <input class="ipcheck" type="radio" />
+    <div class="content show">
+      <h1>NOi Dung</h1>
+    </div>
+    <!-- tao thu vien jquery -->
+    <script src="/js/jquery-3.6.4.min.js"></script>
+    <!-- cu phap su dung -->
+    <script>
+      //   co 2 cach de su ly su kien
+      //c1
+      $(document).ready(function () {
+        // Viet ma jquery
+        //$('') bo tron ben trong dinh nghia giong voi css
+        $("h1").click(function (evt) {
+          alert("click");
+        });
+      });
+      //c2
+      //   $(".btn").on("click", function (evt) {
+      //     alert("clicked!");
+      //   });
+      $(".btn").click(function (evt) {
+        // c1 thay doi toan bo Text trong class btn
+        //  $(".btn").text("Button");
+        // c2 nhan vao doi tuong nao thi doi tuong day thay doi Text
+        $(this).text("Button");
+      });
+      // thay doi html
+      $(".btnChange").click(function () {
+        $(".content").html("<h2>Noi dung thay doi </h2>");
+      });
+      //
+      $(".btnCheck").click(function () {
+        $(".ipcheck").attr("id", "txtcheck");
+        // lay ra gia tri de kiem tra
+        console.log($(".ipcheck").is(":checked"));
+      });
+      $(".btnShow").click(function () {
+        // tao hieu ung dung toggle
+        //$(".content").toggle("show");
+        // an hien
+        // $(".content").hide();
+        // $(".content").show('slow');
+        // Thanh cuon
+        $(".content").slideToggle("slow");
+        // $(".content").slideDown("slow");
+        // $(".content").slideUp("slow");
+        // hieu ung mo nhap trong css
+        // $(".content").fadeToggle("slow");
+      });
+    </script>
+  </body>
+</html>

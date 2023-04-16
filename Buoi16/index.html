@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="num1" value="0" />
+    <input type="text" id="num2" value="0" /> <br />
+    <input type="button" onclick="sum()" value=" = " />
+    <input type="text" id="result" /> <br />
+    <script>
+      function sum() {
+        let a = parseFloat(document.getElementById("num1").value);
+        let b = parseFloat(document.getElementById("num2").value);
+        // // Ép kiểu dữ liệu cach khac
+        // a = Number(a);
+        // b = Number(b);
+
+        // Kiểm tra dữ liệu
+        if (a == "" || b == "") {
+          alert("Vui lòng nhập vào hai số");
+          return false;
+        }
+
+        if (isNaN(a) || isNaN(b)) {
+          alert("Bạn phải nhập vào hai số");
+          return false;
+        }
+
+        let sum = parseInt(a) + b;
+
+        document.getElementById("result").value = sum;
+      }
+    </script>
+  </body>
+</html>
