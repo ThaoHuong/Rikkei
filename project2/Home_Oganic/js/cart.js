@@ -74,7 +74,6 @@ function loadProduct_Cart() {
                     </div>
                     </div>
                 </td>
-                <td class="shoping__cart__total"><span id="cart_total_item"></span></td>
                 <td class="shoping__cart__item__close">
                     <span><i class="icon_close"  onclick="delCart(event, '${
                       c.productId
@@ -110,22 +109,22 @@ function delCart(evt, id) {
 
 function total_cart() {
   // tính tổng tiền
-  let total_span = document.getElementById("cart_total_item");
-  let total_c = document.getElementById("cart_total");
+  // var total_span = document.getElementById("cart_total_item");
+  var total_c = document.getElementById("cart_total");
   var tt = 0;
   // for (let i = 0; i < carts.length; i++) {
   //   var total = parseInt(carts[i].quantity) * parseInt(carts[i].price);
   //   tt += total;
   // }
   for (let c of carts) {
-    var total = parseInt(c[i].quantity) * parseInt(c[i].price);
+    var total = parseInt(c.quantity) * parseInt(c.price);
     tt += total;
   }
-  total_span.innerText = total;
+  // total_span.innerText = total;
   total_c.innerHTML = tt;
 }
 total_cart();
-//
+// checkout
 $(document).on("click", ".btnpro", function () {
   if (confirm("Bạn có muốn đặt hàng không?")) {
     alert("Đặt hàng thành công");
@@ -133,6 +132,7 @@ $(document).on("click", ".btnpro", function () {
     window.location.href = "index.html";
   }
 });
+// input -
 $(document).on("click", ".dec_span", function () {
   let tr = $(this).parents("tr");
   let id = $(tr).data("id");
@@ -144,10 +144,11 @@ $(document).on("click", ".dec_span", function () {
     cartItem.quantity = 0;
   }
   sessionStorage.setItem("carts", JSON.stringify(carts));
-
+  location.reload();
   total_cart();
   loadProduct_Cart();
 });
+// input +
 $(document).on("click", ".inc_span", function () {
   let tr = $(this).parents("tr");
   let id = $(tr).data("id");
@@ -156,10 +157,11 @@ $(document).on("click", ".inc_span", function () {
     // tăng số lượng
     cartItem.quantity += 1;
   } else {
-    alert(" vượt quá số lượng trong kho");
+    // alert(" vượt quá số lượng trong kho");
     location.reload();
   }
   sessionStorage.setItem("carts", JSON.stringify(carts));
+  location.reload();
   total_cart();
   loadProduct_Cart();
 });
