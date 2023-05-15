@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <!-- <link rel="stylesheet" href="/Admin/dist/css/adminlte.min.css" /> -->
+    <link
+      rel="stylesheet"
+      href="/Admin/plugins/fontawesome-free/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/Admin/dist/css/login.css" />
+    <link rel="stylesheet" href="/Admin/icofont/icofont.min.css" />
+  </head>
+  <body>
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+    <div id="login">
+      <div class="container">
+        <div
+          id="login-row"
+          class="row justify-content-center align-items-center"
+        >
+          <div id="login-column" class="col-md-6">
+            <div id="login-box" class="col-md-12">
+              <form id="login-form" class="form" action="" method="post">
+                <h3 class="text-center text-info">Login</h3>
+                <div class="form-group">
+                  <label for="username" class="text-info">Username:</label
+                  ><br />
+                  <input
+                    type="text"
+                    name="username"
+                    id="username"
+                    class="form-control"
+                    placeholder="Nhập tên đăng nhập..."
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="password" class="text-info">Password:</label
+                  ><br />
+                  <input
+                    type="text"
+                    name="password"
+                    id="password"
+                    class="form-control"
+                    placeholder="Nhập mật khẩu ..."
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="remember-me" class="text-info">
+                    <span>Remember me</span> <span
+                      ><input
+                        id="remember-me"
+                        name="remember-me"
+                        type="checkbox" /></span></label
+                  ><br />
+                  <div class="row">
+                    <div class="col-md-6">
+                      <button
+                        id="btnlogin"
+                        class="btn btn-info btn-md submit-button"
+                      >
+                        Đăng nhập
+                      </button>
+                    </div>
+                    <div class="col-md-6">
+                      <button
+                        id="btnregister"
+                        class="btn btn-info register-btn"
+                      >
+                        Đăng ký
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="form-login">
+                    <span class="txt1"> Or login with </span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <a href="#" class="btn-face m-b-10">
+                        <i class="fa fa-facebook-official"></i>
+                        <img
+                          src="/Admin/dist/img/credit/Facebook_icon.png"
+                          alt="FACEBOOK"
+                        />
+                        Facebook
+                      </a>
+                    </div>
+                    <div class="col-md-6">
+                      <a href="#" class="btn-google m-b-10">
+                        <img
+                          src="/Admin/dist/img/credit/icon-google.png"
+                          alt="GOOGLE"
+                        />
+                        Google
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/Admin/dist/js/jquery-3.6.4.min.js"></script>
+    <script src="/Admin/dist/js/adminlte.min.js.map"></script>
+    <script src="/Admin/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/Admin/dist/js/login.js"></script>
+  </body>
+</html>

@@ -1,0 +1,87 @@
+body {
+  min-height: 100vh;
+  background: #ffa17f;
+  background: -webkit-linear-gradient(to right, #d43f8d, #ffa17f);
+  background: linear-gradient(to right, #d43f8d, #ffa17f);
+}
+.btn {
+  display: inline-block;
+  border-radius: 3px;
+  background-color: #f4511e;
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font-size: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  padding: 10px;
+}
+#login .container #login-row #login-column #login-box {
+  margin-top: 120px;
+  max-width: 600px;
+  background-color: #fafafa;
+  border-radius: 1px;
+  box-shadow: 3px 3px salmon;
+}
+#login .container #login-row #login-column #login-box #login-form {
+  padding: 20px;
+}
+.text-info {
+  margin: 5px 0px;
+}
+.form-login {
+  text-align: center;
+}
+.txt1 {
+  font-family: Raleway-Regular;
+  font-size: 16px;
+  color: #999;
+  line-height: 1.4;
+  font-size: 18px;
+  margin: 10px 0px;
+}
+.btn-face,
+.btn-google {
+  font-family: Raleway-Bold;
+  font-size: 16px;
+  line-height: 1.2;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  border-radius: 3px;
+  border: 1px solid #e6e6e6;
+  background-color: #fff;
+  transition: all 0.4s;
+  margin-top: 10px;
+}
+
+.btn-face {
+  color: #3b5998;
+}
+
+.btn-face i {
+  font-size: 20px;
+  margin-right: 10px;
+  padding-bottom: 1px;
+}
+
+.btn-google,
+.btn-face {
+  color: #555;
+}
+
+.btn-google img,
+.btn-face img {
+  width: 19px;
+  margin-right: 10px;
+  padding-bottom: 1px;
+}
+
+.btn-face:hover,
+.btn-google:hover {
+  border-color: #d33f8d;
+}

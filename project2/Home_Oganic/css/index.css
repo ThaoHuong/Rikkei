@@ -1,0 +1,23 @@
+#proCate {
+  display: inline-block !important;
+  padding: 0;
+  border: none;
+}
+.hero__search__form form .hero__search__categories span {
+  clear: both;
+  display: none !important;
+}
+
+#proCate > .form-control {
+  height: 0 !important;
+}
+.cart_total_item {
+  text-align: center;
+  line-height: 15px;
+  display: inline-block;
+  padding: 10px;
+}
+.shoping__cart__item img {
+  width: 70px;
+  height: 70px;
+}
